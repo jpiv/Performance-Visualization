@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extra Credit</title>
+	<script type="text/javascript" src="../lib/underscore/underscore.js"></script>
+	<script type="text/javascript" src="../lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="src/functional/stack.js"></script>
+	<script type="text/javascript" src="src/functional/queue.js"></script>
+	<script type="text/javascript" src="src/functional-shared/stack.js"></script>
+	<script type="text/javascript" src="src/functional-shared/queue.js"></script>
+	<script type="text/javascript" src="src/prototypal/stack.js"></script>
+	<script type="text/javascript" src="src/prototypal/queue.js"></script>
+	<script type="text/javascript" src="src/pseudoclassical/stack.js"></script>
+	<script type="text/javascript" src="src/pseudoclassical/queue.js"></script>
+	<script type="text/javascript" src="src/script.js"></script>
+	<script type="text/javascript" src="src/Chart.js"></script>
+</head>
+<body onload='testAll(10000);'>
+	<h3>Profiling Extra Credit</h3>
+	<hr>
+	<br />
+	<canvas id="canvas" width='500' height='300'></canvas>
+	<br />
+	Instantiation Count: <input id='in' value="10000" onclick='this.value="10000"'></input>
+ 	&nbsp;&nbsp;&nbsp;
+	<button onclick='testAll(document.getElementById("in").value);'>Test</button>
+</body>
+</html>
