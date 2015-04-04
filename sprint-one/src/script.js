@@ -227,9 +227,8 @@ var loadCompare = function ()
     var ctx = [];
     var charts = [];
 
-    $('#jscript').val("To test one algorithm paste it in and click test."
-            + "\n\nTo compare two algorithms paste one, "
-            + "click compare, then paste the other and click compare again.");
+    $('#jscript').val("Paste a function to test here.");
+    $('#jscript2').val("Paste a function to compare here.");
     
     var data = {
     labels: [],
