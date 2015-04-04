@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="../lib/underscore/underscore.js"></script>
+  <script type="text/javascript" src="../lib/jquery/jquery.js"></script>
+  <script type="text/javascript" src="src/Chart.js"></script>
+  <script type="text/javascript" src="src/script.js"></script>
+  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+  <link rel="text/javascript" href="../lib/bootstrap/js/bootstrap.js">
+  <link rel="shortcut icon" href="../favicon.ico">
+</head>
+<body onload='showTimeComps();'>
+  <nav class="nav navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <p class="navbar-text">Performance Visualization</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="test.html">Instantiation Patterns</a></li>
+        <li class="active"><a href="#">Time Complexities</a></li>
+        <li><a href="testAndCompare.html">Test and Compare</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>O(C)</h2>
+        <canvas id="canvas0" width='500' height='300'></canvas>
+      </div>
+      <div class="col-md-6">
+        <h2>O(n)</h2>
+        <canvas id="canvas1" width='500' height='300'></canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>O(n^2)</h2>
+        <canvas id="canvas2" width='500' height='300'></canvas>
+      </div>
+      <div class="col-md-6">
+        <h2>O(2^n)</h2>
+        <canvas id="canvas3" width='500' height='300'></canvas>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -17,7 +17,7 @@ queueMethods.dequeue = function(){
     var result = this.storage[size[0]];
     delete this.storage[size[0]];
   } else {
-    this.sized = 0
+    this.sized = 0;
   }
   return result;
 }
