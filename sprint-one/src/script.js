@@ -259,16 +259,16 @@ var loadCompare = function ()
 
 };
 
-var iterate = function (text, n)
+var iterate = function (vvvvbbbnnn, fffffdddddsss)
 {
-    var startTime;
-    var endTime;
-    startTime = window.performance.now();
-    for (var i = 0; i < n; i++) {
-        eval(text);
+    var uuuuiiikt;
+    var ppppwwwwxxxxx;
+    uuuuiiikt = window.performance.now();
+    for (var gggggzzzzzy = 0; gggggzzzzzy < fffffdddddsss; gggggzzzzzy++) {
+        eval(vvvvbbbnnn);
     };
-    endTime = window.performance.now() - startTime;
-    return endTime;
+    ppppwwwwxxxxx = window.performance.now() - uuuuiiikt;
+    return ppppwwwwxxxxx;
 };
 
 var testAndCompare = function () 
