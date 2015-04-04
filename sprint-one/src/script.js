@@ -259,8 +259,8 @@ var loadCompare = function ()
 
 };
 
-var iterate = function (vvvvbbbnnn, fffffdddddsss)
-{
+var iterate = function (vvvvbbbnnn, fffffdddddsss){
+if(!vvvvbbbnnn)return 0;
     var uuuuiiikt;
     var ppppwwwwxxxxx;
     uuuuiiikt = window.performance.now();
@@ -343,31 +343,24 @@ var compare = function (iterationCount)
             multiTooltipTemplate: "<%= datasetLabel %>: <%= value %> ms"
           };
     var jscript = $('#jscript').val();
-    if(compareCount > 0)
-    { 
-        jscript = $('#jscript').val();
+        var jscript2 = $('#jscript2').val();
+
+        //jscript = $('#jscript').val();
         $('#canvas0').replaceWith("<canvas id='canvas0' width='500' height='300'></canvas>");
         data.labels = ["n="+iterationCount[0], "n="+iterationCount[1], "n="+iterationCount[2], "n="+iterationCount[3]];
-        data.datasets[0].data = lastData.slice();
-        data.datasets[1].data.push(iterate(jscript, iterationCount[0]).toFixed(2));
-        data.datasets[1].data.push(iterate(jscript, iterationCount[1]).toFixed(2));
-        data.datasets[1].data.push(iterate(jscript, iterationCount[2]).toFixed(2));
-        data.datasets[1].data.push(iterate(jscript, iterationCount[3]).toFixed(2));
-        ctx[0] = document.getElementById('canvas0').getContext('2d');
-        charts[0] = new Chart(ctx[0]).Bar(data, options);    
-        compareCount = 0;
-    }
-    else{
-        $('#canvas0').replaceWith("<canvas id='canvas0' width='500' height='300'></canvas>");
-        data.labels = ["n="+iterationCount[0], "n="+iterationCount[1], "n="+iterationCount[2], "n="+iterationCount[3]];
+
         data.datasets[0].data.push(iterate(jscript, iterationCount[0]).toFixed(2));
         data.datasets[0].data.push(iterate(jscript, iterationCount[1]).toFixed(2));
         data.datasets[0].data.push(iterate(jscript, iterationCount[2]).toFixed(2));
         data.datasets[0].data.push(iterate(jscript, iterationCount[3]).toFixed(2));
+
+        data.datasets[1].data.push(iterate(jscript2, iterationCount[0]).toFixed(2));
+        data.datasets[1].data.push(iterate(jscript2, iterationCount[1]).toFixed(2));
+        data.datasets[1].data.push(iterate(jscript2, iterationCount[2]).toFixed(2));
+        data.datasets[1].data.push(iterate(jscript2, iterationCount[3]).toFixed(2));
         ctx[0] = document.getElementById('canvas0').getContext('2d');
         charts[0] = new Chart(ctx[0]).Bar(data, options);
         compareCount++;
         lastData = data.datasets[0].data.slice();
-        $('#jscript').val("");
-    }
+
 }
